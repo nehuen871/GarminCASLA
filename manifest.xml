@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<iq:manifest version="3" xmlns:iq="http://www.garmin.com/xml/connectiq">
+ <iq:application id="c7f324506a1e43de928bfa01a3b01650" type="watchface" name="@Strings.AppName" entry="AzulgranaApp" launcherIcon="@Drawables.LauncherIcon" minApiLevel="3.2.0">
+  <iq:products><iq:product id="fr165"/></iq:products>
+  <iq:permissions/><iq:languages><iq:language>spa</iq:language><iq:language>eng</iq:language></iq:languages><iq:barrels/>
+ </iq:application>
+</iq:manifest>

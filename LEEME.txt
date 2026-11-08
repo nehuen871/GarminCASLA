@@ -1,0 +1,40 @@
+AZULGRANA 165 — Esfera personal para Garmin Forerunner 165
+
+ARCHIVO PARA INSTALAR
+bin/Azulgrana165.prg
+
+INSTALACIÓN
+1. Conectá el Forerunner 165 a la computadora con un cable USB de datos.
+2. Abrí el almacenamiento del reloj y su carpeta GARMIN/APPS.
+   En macOS, si el reloj no aparece en Finder, usá una herramienta
+   compatible con dispositivos MTP. No copies el archivo al teléfono.
+3. Copiá Azulgrana165.prg dentro de GARMIN/APPS.
+4. Desconectá el reloj de forma segura.
+5. Mantené presionado UP y entrá a Pantalla para el reloj / Watch Face.
+   Buscá Azulgrana 165 y aplicala. El texto del menú puede variar.
+
+DISEÑO
+Imagen original sin deformar, centrada en un área de 390 x 244 píxeles.
+Escudo visible, hora con degradado azulgrana arriba, fecha en español y batería abajo, también con degradado.
+Respeta el formato de 12 o 24 horas configurado en el reloj.
+En modo de bajo consumo se muestra solo la hora sobre negro, alternando
+su posición cada minuto. El fondo vuelve al salir del modo de reposo.
+No necesita permisos de red, GPS, sensores ni datos de salud.
+
+VALIDACIÓN
+Compilado con Connect IQ SDK 9.3.0 para el producto fr165.
+Resultado: BUILD SUCCESSFUL, sin advertencias.
+No se verificó visualmente: la herramienta de captura del simulador
+no respondió. Tampoco se probó todavía en un reloj físico.
+
+DESARROLLO
+source/: código Monkey C.
+resources/: imágenes y textos.
+assets/: imagen original proporcionada por el usuario.
+private/: clave de firma local. Guardala para futuras actualizaciones;
+no la publiques ni la compartas. Está excluida de Git.
+Para compilar: JAVA_HOME debe apuntar a Java 17 o posterior.
+Ejecutá el compilador del SDK con:
+monkeyc -f monkey.jungle -d fr165 -o bin/Azulgrana165.prg -y private/developer.der -w -r
+
+Uso personal. No es una aplicación oficial del club ni de Garmin.
