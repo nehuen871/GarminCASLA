@@ -1,0 +1,6 @@
+<fonts>
+<font id="Clock" filename="Clock.fnt"/>
+<font id="Data" filename="Data.fnt"/>
+<font id="Date" filename="Date.fnt"/>
+<font id="Label" filename="Label.fnt"/>
+</fonts>
