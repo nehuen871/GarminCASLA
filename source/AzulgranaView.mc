@@ -6,7 +6,7 @@ import Toybox.Time.Gregorian;
 import Toybox.WatchUi;
 
 class AzulgranaView extends WatchUi.WatchFace {
-    private var crest;
+    private var crow;
     private var clockFont;
     private var dataFont;
     private var dateFont;
@@ -15,7 +15,7 @@ class AzulgranaView extends WatchUi.WatchFace {
 
     function initialize() { WatchFace.initialize(); }
     function onLayout(dc) {
-        crest = WatchUi.loadResource(Rez.Drawables.Crest);
+        crow = WatchUi.loadResource(Rez.Drawables.Crow);
         clockFont = WatchUi.loadResource(Rez.Fonts.Clock);
         dataFont = WatchUi.loadResource(Rez.Fonts.Data);
         dateFont = WatchUi.loadResource(Rez.Fonts.Date);
@@ -59,18 +59,18 @@ class AzulgranaView extends WatchUi.WatchFace {
         }
         var timeLabel = hour.format("%02d") + ":" + clock.min.format("%02d");
         if (sleeping) {
-            // No second timer or full-color crest in AMOLED low-power mode.
+            // No second timer or full-color crow in AMOLED low-power mode.
             var shift = (clock.min % 2 == 0) ? -8 : 8;
             gradientText(dc, cx + shift, 164 + shift, dataFont, timeLabel);
             return;
         }
-        gradientText(dc, cx, 28, labelFont, "C A S L A");
+        gradientText(dc, cx, 28, labelFont, "C U E R V O");
         gradientText(dc, cx, 51, clockFont, timeLabel);
         // Garmin calls onUpdate once a second while the watch face is awake.
         gradientText(dc, cx, 125, dataFont, clock.sec.format("%02d"));
         rail(dc, 75, 142, 1, 0x26558D);
         rail(dc, 315, 142, -1, 0x822841);
-        dc.drawBitmap(cx - crest.getWidth() / 2, 157, crest);
+        dc.drawBitmap(cx - crow.getWidth() / 2, 157 + (144 - crow.getHeight()) / 2, crow);
         rail(dc, 88, 279, 1, 0x26558D);
         rail(dc, 302, 279, -1, 0x822841);
         var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);

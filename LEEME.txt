@@ -1,4 +1,4 @@
-AZULGRANA NEO 165 — Versión 2
+CUERVO NEO 165 — Versión 2
 Esfera personal para Garmin Forerunner 165
 
 RAMAS
@@ -6,7 +6,8 @@ codex/azulgrana-v1-backup: primera versión aprobada, con bandera de fondo,
 degradado azulgrana y fecha/batería separadas. Incluye el PRG de esa versión.
 Commit inicial del respaldo: 78d73a9.
 codex/azulgrana-futurista-v2: diseño futurista actual.
-El respaldo es local; no se subió a un repositorio remoto.
+Repositorio: https://github.com/nehuen871/GarminCASLA
+Ambas ramas están publicadas en GitHub.
 
 ARCHIVO PARA INSTALAR
 bin/Azulgrana165.prg (en esta rama corresponde a la versión 2).
@@ -16,12 +17,13 @@ INSTALACIÓN
 2. Abrí el almacenamiento del reloj y su carpeta GARMIN/APPS.
    En macOS puede ser necesaria una herramienta compatible con MTP.
 3. Copiá Azulgrana165.prg a GARMIN/APPS y desconectá de forma segura.
-4. Mantené UP, elegí Pantalla para el reloj, buscá Azulgrana Neo 165
+4. Mantené UP, elegí Pantalla para el reloj, buscá Cuervo Neo 165
    y presioná START > Aplicar. Los nombres pueden variar por idioma.
 Se conserva el identificador de aplicación para actualizar la esfera anterior.
 
 DISEÑO Y DATOS
-Solo el escudo aislado sobre negro, sin bandera exterior.
+Cuervo azulgrana sobre negro; sustituye al escudo y al texto CASLA.
+El icono también utiliza el cuervo. Véase assets/CUERVO-FUENTE.txt.
 Fuente Orbitron con degradado azulgrana en la hora, segundos, fecha y datos.
 Respeta la configuración de hora de 12 o 24 horas del reloj.
 PASOS: total diario de ActivityMonitor.getInfo().steps, no un contador propio.
@@ -35,7 +37,7 @@ Los menús generales de Garmin conservan su diseño.
 VALIDACIÓN
 Compilado con Connect IQ SDK 9.3.0 para fr165: BUILD SUCCESSFUL sin advertencias.
 Cargado y revisado visualmente en el simulador Forerunner 165.
-Tipografía, escudo, fecha, pasos, batería y segundos visibles sin recortes.
+Tipografía, cuervo, fecha, pasos, batería y segundos visibles sin recortes.
 Falta probar la esfera en el reloj físico.
 
 FUENTES Y RECURSOS
@@ -44,7 +46,9 @@ resources/fonts/: fuentes BMFont ya generadas e incluidas para compilar.
 assets/fonts/Orbitron.ttf y OFL.txt: fuente libre Orbitron y su licencia SIL OFL.
 tools/build_fonts.py: generador de atlas de fuentes (requiere Pillow).
 assets/san-lorenzo-original.png: imagen original proporcionada por el usuario.
-assets/escudo-aislado-v2.png: escudo aislado con herramienta de imágenes.
+assets/cuervo-azulgrana-v2.png: adaptación generada de la opción 2 elegida.
+Los recursos antiguos del escudo y bandera son históricos y no están
+referenciados por la esfera ni por su icono actual.
 private/: clave de firma local, excluida de Git; conservar para actualizar.
 No compartir los archivos privados.
 

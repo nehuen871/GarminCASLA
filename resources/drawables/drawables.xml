@@ -1,4 +1,4 @@
 <drawables>
-<bitmap id="Crest" filename="crest-v2.png" dithering="none"/>
-<bitmap id="LauncherIcon" filename="icon.png"/>
+<bitmap id="Crow" filename="crow-v2.png" dithering="none"/>
+<bitmap id="LauncherIcon" filename="crow-icon.png" dithering="none"/>
 </drawables>
