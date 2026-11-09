@@ -1,0 +1,8 @@
+Imagen proporcionada por el usuario: 1c6lvqpqzdg51.jpg.
+Se conserva la imagen completa, sin recolorear ni generar un reemplazo.
+Versiones reducidas para la esfera y el icono.
+Autoría y licencia de distribución no verificadas; esta variante es una prueba personal.
+
+Variante azulgrana: fondo y marco retirados con herramienta de imágenes,
+plumas recoloreadas en azul y grana a pedido del usuario.
+Archivo: cuervo-pixel-azulgrana.png.
